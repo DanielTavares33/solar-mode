@@ -6,7 +6,9 @@ Solar-Mode automatically switches between light and dark themes in VS Code based
 
 
 * Auto-switches between light and dark themes using your location's sunrise/sunset.
-* Includes a sample command: `solar-mode.helloWorld`.
+* Status bar integration shows current mode (day/night) and lets you toggle themes manually.
+* Manual override: toggling the theme suspends automatic switching until the next sunrise/sunset event.
+* Uses SunCalc to calculate sunrise and sunset times based on your configured location.
 
 ## Requirements
 
@@ -29,18 +31,24 @@ Solar-Mode automatically switches between light and dark themes in VS Code based
 
 ## Extension Settings
 
+You can configure the extension under the `sunsetTheme` namespace in your VS Code settings:
 
+- `sunsetTheme.enabled`: Enable/disable automatic theme switching (default: true)
+- `sunsetTheme.lightTheme`: Theme used during daytime (default: "Default Light+")
+- `sunsetTheme.darkTheme`: Theme used during nighttime (default: "Default Dark+")
+- `sunsetTheme.latitude`: Latitude for sunrise/sunset calculation
+- `sunsetTheme.longitude`: Longitude for sunrise/sunset calculation
 ## Usage
 
-- The extension will automatically switch your theme based on sunrise and sunset times.
-- Use the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) and run `Solar Mode: Hello World` to test the sample command.
+- The extension will automatically switch your theme based on sunrise and sunset times for your configured location.
+- Use the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) and run `Toggle Sunset Theme` to manually switch between day and night themes. This will temporarily suspend automatic switching until the next event.
 
 ## Known Issues
 
 
 ## Configuration
 
-No custom settings are required. The extension works out of the box.
+The extension works out of the box, but for accurate sunrise/sunset times, set your latitude and longitude in the settings.
 
 ## Release Notes
 
