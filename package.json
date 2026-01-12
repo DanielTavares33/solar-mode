@@ -4,20 +4,51 @@
   "description": "Automatically switches between light and dark themes based on your local sunrise and sunset.",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.108.1"
+    "vscode": "^1.108.0"
   },
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "*"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "solar-mode.helloWorld",
-        "title": "Hello World"
+        "command": "sunsetTheme.toggle",
+        "title": "Toggle Sunset Theme"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Sunset Theme Switcher",
+      "properties": {
+        "sunsetTheme.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable automatic theme switching"
+        },
+        "sunsetTheme.lightTheme": {
+          "type": "string",
+          "default": "Default Light+",
+          "description": "Theme used during daytime"
+        },
+        "sunsetTheme.darkTheme": {
+          "type": "string",
+          "default": "Default Dark+",
+          "description": "Theme used during nighttime"
+        },
+        "sunsetTheme.latitude": {
+          "type": "number",
+          "description": "Latitude used for sunrise/sunset calculation"
+        },
+        "sunsetTheme.longitude": {
+          "type": "number",
+          "description": "Longitude used for sunrise/sunset calculation"
+        }
+      }
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
@@ -31,16 +62,20 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.108.1",
     "@types/mocha": "^10.0.10",
     "@types/node": "22.x",
-    "typescript-eslint": "^8.52.0",
-    "eslint": "^9.39.2",
-    "typescript": "^5.9.3",
-    "ts-loader": "^9.5.4",
-    "webpack": "^5.104.1",
-    "webpack-cli": "^6.0.1",
+    "@types/suncalc": "^1.9.2",
+    "@types/vscode": "^1.108.1",
     "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.2",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.52.0",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "suncalc": "^1.9.0"
   }
 }
