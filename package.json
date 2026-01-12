@@ -1,5 +1,9 @@
 {
   "name": "solar-mode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanielTavares33/solar-mode.git"
+  },
   "displayName": "Solar Mode",
   "description": "Automatically switches between light and dark themes based on your local sunrise and sunset.",
   "version": "0.0.1",
