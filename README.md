@@ -1,67 +1,82 @@
-# solar-mode README
+# Solar-Mode VS Code Extension
 
-This is the README for your extension "solar-mode". After writing up a brief description, we recommend including the following sections.
+Solar-Mode automatically switches between light and dark themes in VS Code based on your local sunrise and sunset times.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+* Auto-switches between light and dark themes using your location's sunrise/sunset.
+* Includes a sample command: `solar-mode.helloWorld`.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+
+* Node.js and npm
+* Visual Studio Code (latest recommended)
+
+## Installation
+
+1. Clone this repository:
+	```sh
+	git clone https://github.com/DanielTavares33/solar-mode.git
+	cd solar-mode
+	```
+2. Install dependencies:
+	```sh
+	npm install
+	```
+3. Open the folder in VS Code and press `F5` to launch the extension in a new Extension Development Host window.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
-For example:
+## Usage
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+- The extension will automatically switch your theme based on sunrise and sunset times.
+- Use the command palette (`Ctrl+Shift+P` or `Cmd+Shift+P`) and run `Solar Mode: Hello World` to test the sample command.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+
+## Configuration
+
+No custom settings are required. The extension works out of the box.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
 
-### 1.0.0
+## Testing
 
-Initial release of ...
+<!-- No unit tests are included in this version. -->
 
-### 1.0.1
+## Troubleshooting
 
-Fixed issue #.
+- Ensure you have the latest version of VS Code and Node.js.
+- If you encounter issues, check the output panel for extension logs.
+- For test failures, ensure all dependencies are installed and your environment matches the requirements.
 
-### 1.1.0
+## Contributing
 
-Added features X, Y, and Z.
+- Fork the repository and submit pull requests.
+- Run tests before submitting changes.
 
----
+## License
+MIT
 
 ## Following extension guidelines
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
 
+## References
 * [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
 
 ## Working with Markdown
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+## For more information
+* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
+* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+
+**Enjoy!**
 
 ## For more information
 
