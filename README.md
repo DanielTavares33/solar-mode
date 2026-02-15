@@ -2,6 +2,8 @@
 
 Solar-Mode automatically switches between light and dark themes in VS Code based on your local sunrise and sunset times.
 
+![Solar Mode](images/solar_mode.png)
+
 ## Features
 
 
